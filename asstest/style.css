@@ -1,0 +1,69 @@
+
+html { /* unser root-verzeichnis */
+    /* font-size: 16px; */
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*! ********** Absolute Einheit PX ************ */
+
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: deeppink;
+}
+
+/*! ********** Relative Einheit PROZENT ************ */
+
+.container{
+    width: 50%;
+    background-color: aqua;
+}
+img{
+    width: 50%;
+    display: block;
+}
+
+/*! ********** Viewport-Einheiten VH und VW ************ */
+
+/*? Prozent beziehen sich auf die Größe des Elternelements, während "vh" und "vw" auf die Größe des sichtbaren Bereichs des Browsers abzielen. */
+.box2{
+    width: 50vw;
+    height: 50vh;
+    background-color: chartreuse;
+}
+
+/*! ********** Relative Einheit EM und REM ************ */
+
+.em-font-size{ /* ? Elternelement */
+    font-size: 16px;
+}
+  /*? bezieht sich auf das übergeordnete Element bzw Elternelement*/
+.larger {
+    font-size: 1.5em; /*? Schriftgröße von 1.5 * Elternschriftgröße (16px) = 24px */
+}
+  /*? bezieht sich auf das root Element */
+.even-larger {
+    font-size: 2rem;
+}
+
+
+/*! ********** Clamp ************ */
+
+span{
+    color: blueviolet;
+    font-weight: 900;
+}
+.content{
+    width: 30%;
+    background: rgb(223, 227, 91);
+    padding: 3em;
+  }
+  .title{
+    color: rgb(66, 29, 201);
+    font-weight: 900;
+    line-height: 0.8;
+  
+    font-size: clamp(2rem, 5vw, 5rem);
+    /*? vw - Die Schriftgröße passt sich automatisch an verschiedene Bildschirmgrößen an */
+  }
