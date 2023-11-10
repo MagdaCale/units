@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asstest/style.css">
-    <title>Units</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./asstest/style.css">
+  <title>Units</title>
 </head>
+
 <body>
-    <h1>Units</h1>
-    <!--? Responsive Design: Einheiten ermöglichen es, dass Webseiten auf -->
-    <!--? verschiedenen Geräten und Bildschirmgrößen optimal dargestellt werden.  -->
+  <h1>Units</h1>
+  <!--? Responsive Design: Einheiten ermöglichen es, dass Webseiten auf -->
+  <!--? verschiedenen Geräten und Bildschirmgrößen optimal dargestellt werden.  -->
 
-    <!--? Skalierbarkeit: Einheiten erlauben es, -->
-    <!--? dass Elemente proportional zueinander skalieren.  --> 
+  <!--? Skalierbarkeit: Einheiten erlauben es, -->
+  <!--? dass Elemente proportional zueinander skalieren.  -->
 
-    <div>
-        <p>Absoluten Einheit (px)</p>
-        <!-- Eine feste Einheit, die auf Bildschirmen direkt in Pixeln
+  <article>
+    <h2>Wann benutze ich html und wann :root im CSS</h2>
+    <p>Das Wurzelelement "html" selbst wird normalerweise nicht direkt für die Anwendung von Stilen verwendet, sondern
+      stattdessen für das "body" Element oder andere spezifischere Selektoren. Das :root-Pseudoelement ist jedoch
+      nützlich, um globale Variablen zu deklarieren und eine konsistente Verwendung von Farben, Schriftarten und anderen
+      Stileigenschaften sicherzustellen.</p>
+  </article>
+
+  <div>
+    <p>Absoluten Einheit (px)</p>
+    <!-- Eine feste Einheit, die auf Bildschirmen direkt in Pixeln
           angezeigtwird. Sie bietet präzise Kontrolle über Größen und
           Abstände. -->
-        <div class="box"></div>
-        <!-- Vorteile:
+    <div class="box"></div>
+    <!-- Vorteile:
           Festes Layout: Pixel eignen sich gut, wenn ein festes Layout benötigt
           wird, bei dem bestimmte Elemente genau positioniert werden müssen.
     
@@ -33,60 +43,62 @@
           Barrierefreiheit beeinträchtigen, da sie die Textvergrößerung oder
           andere Anpassungen für Menschen mit Sehbeeinträchtigungen einschränken
           können. -->
+  </div>
+
+  <!-- ------------------ -->
+  <div>
+    <p>Relative einheit (%)</p>
+    <div class="container">
+      <img src="./asstest/cool.jpeg" alt="">
     </div>
+  </div>
 
-    <!-- ------------------ -->
-    <div >
-        <p>Relative einheit (%)</p>
-        <div class="container">
-            <img src="./asstest/cool.jpeg" alt="">
-        </div>
-    </div>
+  <!-- ------------------ -->
 
-    <!-- ------------------ -->
-
-    <div>
-        <p>Viewport-Einheit (vh & vw)</p>
+  <div>
+    <p>Viewport-Einheit (vh & vw)</p>
     <!--  Diese Einheiten beziehen sich auf den sichtbaren Bereich des
           Browserfensters. Sie sind ideal für das Erstellen von Layouts, die auf
           die tatsächliche Größe des Bildschirms reagieren. -->
 
-        <p>Viewport Einhiet -> 50% der breite & Höhe des Viewport </p>
-        <div class="box2"></div>
-    </div>
+    <p>Viewport Einhiet -> 50% der breite & Höhe des Viewport </p>
+    <div class="box2"></div>
+  </div>
 
-    <!-- ------------------ -->
+  <!-- ------------------ -->
 
-    <div class="em-font-size" >
-        <p>Relative Einheiten (em und rem):</p>
-        <!-- basieren auf der Schriftgröße des Elternelements bzw.
+  <div class="em-font-size">
+    <p>Relative Einheiten (em und rem):</p>
+    <!-- basieren auf der Schriftgröße des Elternelements bzw.
             des Root-Elements. Em ist relativ zum Elternelement, während Rem
             relativ zur Schriftgröße des Root-Elements ist. -->
-  
-        <!-- "em" bezieht sich auf die Schriftgröße des jeweiligen Elements. 
+
+    <!-- "em" bezieht sich auf die Schriftgröße des jeweiligen Elements. 
             Wenn wir also eine Schriftgröße 1em verwenden, wird diese auf die Schriftgröße des umgebenden Elements angewendet.  -->
-  
-        <!-- "rem" bezieht sich auf die Schriftgröße des Root-Elements, normalerweise des <html>-Tags.
+
+    <!-- "rem" bezieht sich auf die Schriftgröße des Root-Elements, normalerweise des <html>-Tags.
             Wenn wir also eine Schriftgröße 1rem verwenden, wird diese auf die Schriftgröße des Root-Elements angewendet -- zahl x * 16 -->
-  
-        <p class="normal">Normale Schriftgröße.</p>
-        <p class="larger">Vergrößerte Schriftgröße (1.5em)</p>
-        <p class="even-larger">Noch größere Schriftgröße (2rem)</p>
-      </div>
 
-    <!-- ------------------ -->
+    <p class="normal">Normale Schriftgröße.</p>
+    <p class="larger">Vergrößerte Schriftgröße (1.5em)</p>
+    <p class="even-larger">Noch größere Schriftgröße (2rem)</p>
+  </div>
 
-    <!-- Die clamp()-Funktion ermöglicht es, einen Wert innerhalb eines bestimmten Bereichs zu begrenzen, 
+  <!-- ------------------ -->
+
+  <!-- Die clamp()-Funktion ermöglicht es, einen Wert innerhalb eines bestimmten Bereichs zu begrenzen, 
       was genau dem beschriebenen Verhalten entspricht, bei dem der Text schrumpft oder skaliert, 
       aber innerhalb eines definierten Mindest- und Maximalwerts bleibt. -->
-      <div class="content">
-        <p class="title">Clamp Einheit:</p>
-        <p class="text"><span>Ich bin ein Text und schrupfe bzw skaliere bis zu einem min/max Wert.</span><br>
-          Die CSS-Funktion clamp() begrenzt einen Mittelwert innerhalb eines Wertebereichs zwischen einer definierten Mindest- und einer maximalen Begrenzung. 
-          Die Funktion hat drei Parameter: einen Mindestwert, einen bevorzugten Wert und einen maximal zulässigen Wert.
-        </p>
-      </div>
+  <div class="content">
+    <p class="title">Clamp Einheit:</p>
+    <p class="text"><span>Ich bin ein Text und schrupfe bzw skaliere bis zu einem min/max Wert.</span><br>
+      Die CSS-Funktion clamp() begrenzt einen Mittelwert innerhalb eines Wertebereichs zwischen einer definierten
+      Mindest- und einer maximalen Begrenzung.
+      Die Funktion hat drei Parameter: einen Mindestwert, einen bevorzugten Wert und einen maximal zulässigen Wert.
+    </p>
+  </div>
 
 
 </body>
+
 </html>

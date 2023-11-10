@@ -5,32 +5,38 @@ html { /* unser root-verzeichnis */
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+    --primary-color: "#ff1493"
+    --secondary-color: "#00ffff"
+    --third-color: "#7fff00"
+}
+
 /*! ********** Absolute Einheit PX ************ */
 
 .box{
     width: 200px;
     height: 100px;
-    background-color: deeppink;
+    background-color: var(--primary-color);
 }
 
 /*! ********** Relative Einheit PROZENT ************ */
 
 .container{
     width: 50%;
-    background-color: aqua;
+    background-color: var(--secondary-color);
 }
 img{
     width: 50%;
     display: block;
 }
 
-/*! ********** Viewport-Einheiten VH und VW ************ */
+/*! ********** Viewheightport-Einheiten VH und VW ************ */
 
 /*? Prozent beziehen sich auf die Größe des Elternelements, während "vh" und "vw" auf die Größe des sichtbaren Bereichs des Browsers abzielen. */
 .box2{
     width: 50vw;
     height: 50vh;
-    background-color: chartreuse;
+    background-color: #7fff00;
 }
 
 /*! ********** Relative Einheit EM und REM ************ */
